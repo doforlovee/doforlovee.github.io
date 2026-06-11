@@ -42,55 +42,33 @@ header{
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:30px;
-    font-weight:500;
-    font-size:15px;
+  color:white;
+  text-decoration:none;
+  margin-left:30px;
+  font-weight:400;
+  font-size:15px;
+  letter-spacing:.5px;
 }
+
 .hero{
-  min-height:450px;
+  min-height:380px;
   background:
     linear-gradient(
       rgba(0,0,0,.20),
       rgba(0,0,0,.20)
     ),
     url('atoyac-hero.jpg');
-
   background-size:cover;
   background-position:center center;
   background-repeat:no-repeat;
-
   color:white;
   display:flex;
   align-items:center;
+  position:relative;
 }
 
 .hero-text{
   padding:90px 7%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-
-.kicker{
-  color:#e10600;
-  font-weight:900;
-  letter-spacing:2px;
-  font-size:14px;
-}
-
-.hero h1{
-  font-size:78px;
-  line-height:0.9;
-  margin:20px 0;
-  letter-spacing:-4px;
-}
-
-.hero p{
-  font-size:22px;
-  line-height:1.4;
-  max-width:450px;
 }
 
 .btn{
@@ -101,12 +79,13 @@ nav a{
   font-weight:900;
   padding:16px 28px;
   width:max-content;
+}
 
+.hero-btn{
   position:absolute;
   left:80px;
   bottom:30px;
 }
-
 
 .section{
   padding:55px 6%;
@@ -172,6 +151,13 @@ nav a{
   margin:10px 0;
 }
 
+.kicker{
+  color:#e10600;
+  font-weight:900;
+  letter-spacing:2px;
+  font-size:14px;
+}
+
 .popular{
   background:#e10600;
   color:white;
@@ -200,13 +186,44 @@ footer{
 }
 
 @media(max-width:900px){
-  .hero,
-  .feature{
-    grid-template-columns:1fr;
+
+  header{
+    height:auto;
+    padding:16px 5%;
+    flex-direction:column;
+    gap:12px;
   }
 
-  .hero h1{
-    font-size:54px;
+  .logo img{
+    height:65px;
+  }
+
+  nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:14px;
+  }
+
+  nav a{
+    margin-left:0;
+    font-size:12px;
+  }
+
+  .hero{
+    min-height:520px;
+    background-size:cover;
+    background-position:center center;
+  }
+
+  .hero-btn{
+    left:24px;
+    bottom:24px;
+  }
+
+  .btn{
+    padding:14px 22px;
+    font-size:13px;
   }
 
   .news-grid,
@@ -214,9 +231,12 @@ footer{
     grid-template-columns:1fr;
   }
 
-  nav a{
-    margin-left:12px;
-    font-size:12px;
+  .feature{
+    grid-template-columns:1fr;
+  }
+
+  .feature h2{
+    font-size:42px;
   }
 }
 </style>
@@ -226,8 +246,9 @@ footer{
 
 <header>
   <div class="logo">
-   <img src="logo para web.png" alt="Do For Love">
-</div>
+    <img src="logo para web.png" alt="Do For Love">
+  </div>
+
   <nav>
     <a href="#">INICIO</a>
     <a href="#">INVESTIGACIÓN</a>
@@ -238,8 +259,8 @@ footer{
 
 <section class="hero">
   <div class="hero-text">
-  <a href="#" class="btn">LEER INVESTIGACIÓN</a>
-</div>
+    <a href="#" class="btn hero-btn">LEER INVESTIGACIÓN</a>
+  </div>
 </section>
 
 <section class="section">
@@ -275,6 +296,7 @@ footer{
 <section class="section">
   <div class="feature">
     <img src="atoyac-cover.png" alt="Portada Atoyac Do For Love">
+
     <div>
       <div class="kicker">DOSSIER PRINCIPAL</div>
       <h2>EL CASO ATOYAC</h2>
@@ -300,6 +322,7 @@ footer{
 
   <div class="feature">
     <img src="atoyac-cover.png" alt="Revista Do For Love Issue 001">
+
     <div>
       <div class="kicker">DFL_0001 · JUNIO 2026</div>
       <h2>ISSUE #001</h2>
