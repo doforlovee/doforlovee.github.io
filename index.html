@@ -50,11 +50,21 @@ nav a{
 }
 
 .hero{
-  display:grid;
-  grid-template-columns:1.1fr 0.9fr;
-  min-height:620px;
-  background:#111;
+  min-height:700px;
+  background:
+    linear-gradient(
+      rgba(0,0,0,.55),
+      rgba(0,0,0,.55)
+    ),
+    url('atoyac-hero.jpg');
+
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+
   color:white;
+  display:flex;
+  align-items:center;
 }
 
 .hero-text{
@@ -95,10 +105,6 @@ nav a{
   width:max-content;
 }
 
-.hero-img{
-  background:url('atoyac-cover.png') center/cover no-repeat;
-  min-height:620px;
-}
 
 .section{
   padding:55px 6%;
@@ -235,7 +241,6 @@ footer{
     <p>El río que enferma tu casa. Una investigación sobre agua, territorio, industria y ciudad.</p>
     <a class="btn" href="#">LEER INVESTIGACIÓN</a>
   </div>
-  <div class="hero-img"></div>
 </section>
 
 <section class="section">
