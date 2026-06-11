@@ -6,69 +6,302 @@
 <title>DO FOR LOVE</title>
 
 <style>
+*{
+  box-sizing:border-box;
+}
 
 body{
-margin:0;
-background:#111;
-color:white;
-font-family:Arial, Helvetica, sans-serif;
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f3eadc;
+  color:#111;
+}
+
+header{
+  background:#e10600;
+  color:white;
+  height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 6%;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.logo{
+  font-size:34px;
+  font-weight:900;
+  letter-spacing:-2px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:30px;
+  font-weight:700;
+  font-size:15px;
 }
 
 .hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  min-height:620px;
+  background:#111;
+  color:white;
 }
 
-h1{
-font-size:5rem;
-letter-spacing:5px;
-margin-bottom:20px;
+.hero-text{
+  padding:90px 7%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
 
-p{
-font-size:1.3rem;
-max-width:700px;
-line-height:1.6;
+.kicker{
+  color:#e10600;
+  font-weight:900;
+  letter-spacing:2px;
+  font-size:14px;
 }
 
-.button{
-margin-top:40px;
-padding:15px 35px;
-border:2px solid white;
-text-decoration:none;
-color:white;
-transition:0.3s;
+.hero h1{
+  font-size:78px;
+  line-height:0.9;
+  margin:20px 0;
+  letter-spacing:-4px;
 }
 
-.button:hover{
-background:white;
-color:black;
+.hero p{
+  font-size:22px;
+  line-height:1.4;
+  max-width:620px;
 }
 
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  background:#e10600;
+  color:white;
+  text-decoration:none;
+  font-weight:900;
+  padding:16px 28px;
+  width:max-content;
+}
+
+.hero-img{
+  background:url('atoyac-cover.png') center/cover no-repeat;
+  min-height:620px;
+}
+
+.section{
+  padding:55px 6%;
+}
+
+.section-title{
+  border-top:6px solid #e10600;
+  padding-top:14px;
+  font-size:34px;
+  font-weight:900;
+  margin-bottom:28px;
+}
+
+.news-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.card{
+  background:white;
+  border:1px solid #ddd;
+}
+
+.card-img{
+  height:220px;
+  background:url('atoyac-cover.png') center/cover no-repeat;
+}
+
+.card-content{
+  padding:22px;
+}
+
+.card h3{
+  margin:0 0 10px;
+  font-size:25px;
+  line-height:1;
+}
+
+.card p{
+  margin:0;
+  line-height:1.4;
+  color:#444;
+}
+
+.feature{
+  display:grid;
+  grid-template-columns:0.8fr 1.2fr;
+  gap:35px;
+  background:#111;
+  color:white;
+  padding:50px;
+}
+
+.feature img{
+  width:100%;
+  display:block;
+}
+
+.feature h2{
+  font-size:58px;
+  line-height:0.9;
+  margin:10px 0;
+}
+
+.popular{
+  background:#e10600;
+  color:white;
+}
+
+.popular-list{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.popular-item{
+  border-top:2px solid white;
+  padding-top:15px;
+  font-weight:900;
+  font-size:22px;
+}
+
+footer{
+  background:#111;
+  color:white;
+  padding:45px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+@media(max-width:900px){
+  .hero,
+  .feature{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:54px;
+  }
+
+  .news-grid,
+  .popular-list{
+    grid-template-columns:1fr;
+  }
+
+  nav a{
+    margin-left:12px;
+    font-size:12px;
+  }
+}
 </style>
-
 </head>
 
 <body>
 
+<header>
+  <div class="logo">DO FOR LOVE</div>
+  <nav>
+    <a href="#">INICIO</a>
+    <a href="#">INVESTIGACIÓN</a>
+    <a href="#">REVISTA</a>
+    <a href="#">SOBRE NOSOTROS</a>
+  </nav>
+</header>
+
 <section class="hero">
-
-<h1>DO FOR LOVE</h1>
-
-<p>
-Arquitectura. Territorio. Conflicto urbano.
-</p>
-
-<a class="button" href="#">
-REVISTA #001
-</a>
-
+  <div class="hero-text">
+    <div class="kicker">INVESTIGACIÓN ESPECIAL</div>
+    <h1>ATOYAC</h1>
+    <p>El río que enferma tu casa. Una investigación sobre agua, territorio, industria y ciudad.</p>
+    <a class="btn" href="#">LEER INVESTIGACIÓN</a>
+  </div>
+  <div class="hero-img"></div>
 </section>
+
+<section class="section">
+  <div class="section-title">LO MÁS RECIENTE</div>
+
+  <div class="news-grid">
+    <article class="card">
+      <div class="card-img"></div>
+      <div class="card-content">
+        <h3>El río que Puebla aprendió a ignorar</h3>
+        <p>Una primera mirada al sistema hídrico que atraviesa la ciudad.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-img"></div>
+      <div class="card-content">
+        <h3>Territorio antes que edificio</h3>
+        <p>Por qué la arquitectura también empieza en el paisaje.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-img"></div>
+      <div class="card-content">
+        <h3>La ciudad debajo de la ciudad</h3>
+        <p>Infraestructura, agua y contaminación como relato urbano.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="feature">
+    <img src="atoyac-cover.png" alt="Portada Atoyac Do For Love">
+    <div>
+      <div class="kicker">DOSSIER PRINCIPAL</div>
+      <h2>EL CASO ATOYAC</h2>
+      <p>Una investigación de largo formato sobre el río, sus contaminantes y el territorio que lo rodea.</p>
+      <a class="btn" href="#">ENTRAR AL DOSSIER</a>
+    </div>
+  </div>
+</section>
+
+<section class="section popular">
+  <div class="section-title">LO MÁS POPULAR</div>
+
+  <div class="popular-list">
+    <div class="popular-item">01<br>El Caso Atoyac</div>
+    <div class="popular-item">02<br>El territorio del agua</div>
+    <div class="popular-item">03<br>Arquitectura y conflicto</div>
+    <div class="popular-item">04<br>La revista #001</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-title">REVISTA</div>
+
+  <div class="feature">
+    <img src="atoyac-cover.png" alt="Revista Do For Love Issue 001">
+    <div>
+      <div class="kicker">DFL_0001 · JUNIO 2026</div>
+      <h2>ISSUE #001</h2>
+      <p>La primera edición de Do For Love: ATOYAC, el río que enferma tu casa.</p>
+      <a class="btn" href="#">ABRIR REVISTA</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div><strong>DO FOR LOVE</strong><br>Puebla, México</div>
+  <div>Arquitectura · Urbanismo · Arte · Territorio</div>
+</footer>
 
 </body>
 </html>
