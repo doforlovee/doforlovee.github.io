@@ -6,9 +6,7 @@
 <title>DO FOR LOVE</title>
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{ box-sizing:border-box; }
 
 body{
   margin:0;
@@ -30,11 +28,6 @@ header{
   z-index:100;
 }
 
-.logo{
-  display:flex;
-  align-items:center;
-}
-
 .logo img{
   height:58px;
   width:auto;
@@ -50,25 +43,58 @@ nav a{
   letter-spacing:.5px;
 }
 
+/* HERO CARRUSEL */
 .hero{
-  min-height:420px;
-  background:
-    linear-gradient(
-      rgba(0,0,0,.20),
-      rgba(0,0,0,.20)
-    ),
-    url('atoyac-hero.jpg');
-  background-size:cover;
-  background-position:center center;
-  background-repeat:no-repeat;
-  color:white;
-  display:flex;
-  align-items:center;
+  height:420px;
   position:relative;
+  overflow:hidden;
+  background:#111;
 }
 
-.hero-text{
-  padding:90px 7%;
+.slide{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  transition:opacity .45s ease;
+}
+
+.slide.active{
+  opacity:1;
+}
+
+.slide::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.22);
+}
+
+.slide-content{
+  position:absolute;
+  left:80px;
+  bottom:40px;
+  z-index:2;
+  color:white;
+}
+
+.slide-content .tag{
+  font-size:13px;
+  letter-spacing:2px;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.slide-content h1{
+  font-size:42px;
+  margin:0 0 8px;
+  line-height:.95;
+}
+
+.slide-content p{
+  margin:0 0 20px;
+  font-size:18px;
 }
 
 .btn{
@@ -77,15 +103,26 @@ nav a{
   color:white;
   text-decoration:none;
   font-weight:900;
-  padding:16px 28px;
+  padding:14px 24px;
   width:max-content;
 }
 
-.hero-btn{
+.arrow{
   position:absolute;
-  left:80px;
-  bottom:30px;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:3;
+  background:rgba(0,0,0,.35);
+  color:white;
+  border:1px solid rgba(255,255,255,.4);
+  width:42px;
+  height:42px;
+  cursor:pointer;
+  font-size:22px;
 }
+
+.arrow.left{ left:22px; }
+.arrow.right{ right:22px; }
 
 .section{
   padding:55px 6%;
@@ -185,7 +222,6 @@ footer{
   align-items:center;
 }
 
-/* CELULAR */
 @media(max-width:900px){
 
   header{
@@ -195,9 +231,7 @@ footer{
     gap:15px;
   }
 
-  .logo img{
-    height:55px;
-  }
+  .logo img{ height:55px; }
 
   nav{
     display:flex;
@@ -212,18 +246,32 @@ footer{
   }
 
   .hero{
-    min-height:300px;
-    background-position:center center;
+    height:330px;
   }
 
-  .hero-btn{
-    left:20px;
-    bottom:20px;
+  .slide-content{
+    left:24px;
+    bottom:24px;
+    max-width:80%;
+  }
+
+  .slide-content h1{
+    font-size:32px;
+  }
+
+  .slide-content p{
+    font-size:15px;
   }
 
   .btn{
     font-size:13px;
     padding:12px 20px;
+  }
+
+  .arrow{
+    width:36px;
+    height:36px;
+    font-size:18px;
   }
 
   .section{
@@ -257,7 +305,6 @@ footer{
     gap:15px;
     text-align:center;
   }
-
 }
 </style>
 </head>
@@ -270,17 +317,45 @@ footer{
   </div>
 
   <nav>
-    <a href="#">INICIO</a>
+    <a href="index.html">INICIO</a>
     <a href="investigacion.html">INVESTIGACIÓN</a>
-    <a href="#">REVISTA</a>
-    <a href="#">SOBRE NOSOTROS</a>
+    <a href="revista.html">REVISTA</a>
+    <a href="sobre-nosotros.html">SOBRE NOSOTROS</a>
   </nav>
 </header>
 
 <section class="hero">
-  <div class="hero-text">
-<a href="investigacion.html" class="btn hero-btn">LEER INVESTIGACIÓN</a>
+
+  <div class="slide active" style="background-image:url('atoyac-hero.jpg');">
+    <div class="slide-content">
+      <div class="tag">INVESTIGACIÓN</div>
+      <h1>ATOYAC</h1>
+      <p>El río que enferma tu casa.</p>
+      <a href="investigacion.html" class="btn">LEER INVESTIGACIÓN</a>
+    </div>
   </div>
+
+  <div class="slide" style="background-image:url('hero-dfl-001.jpg');">
+    <div class="slide-content">
+      <div class="tag">REVISTA</div>
+      <h1>ISSUE #001</h1>
+      <p>La primera edición de Do For Love.</p>
+      <a href="revista.html" class="btn">ABRIR REVISTA</a>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image:url('hero-doforlove.jpg');">
+    <div class="slide-content">
+      <div class="tag">DO FOR LOVE</div>
+      <h1>ARQUITECTURA.<br>TERRITORIO.<br>CIUDAD.</h1>
+      <p>Historias que explican el territorio.</p>
+      <a href="sobre-nosotros.html" class="btn">CONOCER EL PROYECTO</a>
+    </div>
+  </div>
+
+  <button class="arrow left" onclick="changeSlide(-1)">‹</button>
+  <button class="arrow right" onclick="changeSlide(1)">›</button>
+
 </section>
 
 <section class="section">
@@ -321,7 +396,7 @@ footer{
       <div class="kicker">DOSSIER PRINCIPAL</div>
       <h2>EL CASO ATOYAC</h2>
       <p>Una investigación de largo formato sobre el río, sus contaminantes y el territorio que lo rodea.</p>
-      <a class="btn" href="#">ENTRAR AL DOSSIER</a>
+      <a class="btn" href="investigacion.html">ENTRAR AL DOSSIER</a>
     </div>
   </div>
 </section>
@@ -347,7 +422,7 @@ footer{
       <div class="kicker">DFL_0001 · JUNIO 2026</div>
       <h2>ISSUE #001</h2>
       <p>La primera edición de Do For Love: ATOYAC, el río que enferma tu casa.</p>
-      <a class="btn" href="#">ABRIR REVISTA</a>
+      <a class="btn" href="revista.html">ABRIR REVISTA</a>
     </div>
   </div>
 </section>
@@ -356,6 +431,21 @@ footer{
   <div><strong>DO FOR LOVE</strong><br>Puebla, México</div>
   <div>Arquitectura · Urbanismo · Arte · Territorio</div>
 </footer>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index){
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (index + slides.length) % slides.length;
+  slides[currentSlide].classList.add('active');
+}
+
+function changeSlide(direction){
+  showSlide(currentSlide + direction);
+}
+</script>
 
 </body>
 </html>
