@@ -65,11 +65,32 @@ nav a{
   opacity:1;
 }
 
-.slide::after{
-  content:"";
+.slide-content{
   position:absolute;
-  inset:0;
-  background:rgba(0,0,0,.22);
+  left:80px;
+  bottom:40px;
+  z-index:2;
+  color:white;
+}
+
+.slide-content .tag{
+  font-size:13px;
+  letter-spacing:2px;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.slide-content h1{
+  font-size:42px;
+  margin:0 0 8px;
+  line-height:.95;
+  color:white;
+}
+
+.slide-content p{
+  margin:0 0 20px;
+  font-size:18px;
+  color:white;
 }
 
 .btn{
