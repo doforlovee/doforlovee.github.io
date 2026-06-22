@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -7,7 +6,7 @@
 <title>Revista | Do For Love</title>
 
 <style>
-*{box-sizing:border-box;}
+*{ box-sizing:border-box; }
 
 body{
   margin:0;
@@ -32,6 +31,7 @@ header{
 .logo img{
   height:58px;
   width:auto;
+  display:block;
 }
 
 nav a{
@@ -40,29 +40,43 @@ nav a{
   margin-left:30px;
   font-weight:400;
   font-size:15px;
+  letter-spacing:.5px;
 }
 
-.hero{
+.cover-section{
   min-height:calc(100vh - 76px);
-  background:#111;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:50px 6%;
+  padding:40px 6%;
+  background:#111;
 }
 
-.hero-content{
-  display:grid;
-  grid-template-columns:0.9fr 1.1fr;
-  gap:60px;
-  align-items:center;
-  max-width:1400px;
+.cover-wrap{
+  text-align:center;
 }
 
-.hero-content img{
-  width:100%;
-  max-width:500px;
-  box-shadow:0 30px 80px rgba(0,0,0,.45);
+.cover-wrap img{
+  max-height:78vh;
+  max-width:100%;
+  width:auto;
+  box-shadow:0 30px 80px rgba(0,0,0,.55);
+}
+
+.btn{
+  display:inline-block;
+  margin-top:28px;
+  background:#b81712;
+  color:white;
+  text-decoration:none;
+  font-weight:900;
+  padding:16px 30px;
+}
+
+.content{
+  padding:70px 8%;
+  max-width:1200px;
+  margin:auto;
 }
 
 .kicker{
@@ -72,44 +86,23 @@ nav a{
   font-size:14px;
 }
 
-.hero h1{
-  font-size:72px;
-  line-height:.9;
-  margin:15px 0;
+h1{
+  font-size:58px;
+  line-height:.95;
+  margin:14px 0;
 }
 
-.hero p{
-  font-size:20px;
-  line-height:1.6;
-  max-width:650px;
-}
-
-.btn{
-  display:inline-block;
-  margin-top:25px;
-  background:#b81712;
-  color:white;
-  text-decoration:none;
-  font-weight:900;
-  padding:16px 30px;
-}
-
-.section{
-  padding:70px 8%;
-}
-
-.section-title{
-  border-top:6px solid #b81712;
-  padding-top:15px;
-  font-size:34px;
-  font-weight:900;
-  margin-bottom:30px;
+.intro{
+  font-size:21px;
+  line-height:1.5;
+  max-width:850px;
 }
 
 .placeholder{
+  margin-top:35px;
   background:white;
-  padding:40px;
   border-left:6px solid #b81712;
+  padding:30px;
 }
 
 footer{
@@ -118,10 +111,10 @@ footer{
   padding:45px 6%;
   display:flex;
   justify-content:space-between;
+  align-items:center;
 }
 
 @media(max-width:900px){
-
   header{
     height:auto;
     padding:15px 20px;
@@ -129,9 +122,7 @@ footer{
     gap:15px;
   }
 
-  .logo img{
-    height:55px;
-  }
+  .logo img{ height:55px; }
 
   nav{
     display:flex;
@@ -145,18 +136,19 @@ footer{
     font-size:13px;
   }
 
-  .hero-content{
-    grid-template-columns:1fr;
-    gap:30px;
+  .cover-section{
+    min-height:auto;
+    padding:35px 20px;
   }
 
-  .hero h1{
-    font-size:42px;
+  .cover-wrap img{
+    max-height:none;
+    width:100%;
   }
 
-  .hero p{
-    font-size:18px;
-  }
+  h1{ font-size:40px; }
+
+  .intro{ font-size:18px; }
 
   footer{
     flex-direction:column;
@@ -165,7 +157,6 @@ footer{
   }
 }
 </style>
-
 </head>
 
 <body>
@@ -183,56 +174,37 @@ footer{
   </nav>
 </header>
 
-<section class="hero">
+<section class="cover-section">
+  <div class="cover-wrap">
+    <img src="revista-atoyac-cover.png" alt="Portada Revista Atoyac">
+    <br>
+    <a href="#revista" class="btn">ABRIR EDICIÓN</a>
+  </div>
+</section>
 
-  <div class="hero-content">
-
-```
-<img src="revista-atoyac-cover.png" alt="Revista Atoyac">
-
-<div>
+<main id="revista" class="content">
   <div class="kicker">DO FOR LOVE · ISSUE #001</div>
 
   <h1>ATOYAC</h1>
 
-  <p>
-    La primera edición editorial de Do For Love.
-    Una reinterpretación narrativa de la investigación sobre el Río Atoyac,
-    contada a través de imágenes, personajes, territorio y memoria.
+  <p class="intro">
+    La primera edición editorial de Do For Love. Una reinterpretación narrativa
+    de la investigación sobre el Río Atoyac, contada a través de imágenes,
+    personajes, territorio y memoria.
   </p>
 
-  <a href="#" class="btn">ABRIR EDICIÓN</a>
-
-</div>
-```
-
-  </div>
-
-</section>
-
-<section class="section">
-
-  <div class="section-title">PRÓXIMAMENTE</div>
-
   <div class="placeholder">
-
-```
-<h2>Contenido editorial</h2>
-
-<p>
-  Esta sección alojará la edición completa de la revista digital
-  Do For Love Issue #001.
-</p>
-
-<p>
-  Aquí se integrarán artículos, galerías, material gráfico,
-  personajes y contenido narrativo basado en la investigación ATOYAC.
-</p>
-```
-
+    <h2>Contenido editorial</h2>
+    <p>
+      Esta sección alojará la edición completa de la revista digital
+      Do For Love Issue #001.
+    </p>
+    <p>
+      Aquí se integrarán artículos, galerías, material gráfico, personajes
+      y contenido narrativo basado en la investigación ATOYAC.
+    </p>
   </div>
-
-</section>
+</main>
 
 <footer>
   <div><strong>DO FOR LOVE</strong><br>Puebla, México</div>
