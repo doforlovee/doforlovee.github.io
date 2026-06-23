@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre Nosotros | Do For Love</title>
+
+<style>
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f3eadc;
+  color:#111;
+}
+
+header{
+  background:#b81712;
+  color:white;
+  height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 2%;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.logo img{
+  height:58px;
+  width:auto;
+  display:block;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:30px;
+  font-weight:400;
+  font-size:15px;
+  letter-spacing:.5px;
+}
+
+.hero{
+  background:#111;
+  color:white;
+  padding:110px 8%;
+}
+
+.kicker{
+  color:#b81712;
+  font-weight:900;
+  letter-spacing:2px;
+  font-size:14px;
+}
+
+h1{
+  font-size:72px;
+  line-height:.9;
+  margin:18px 0;
+  max-width:900px;
+}
+
+.hero p{
+  font-size:22px;
+  line-height:1.5;
+  max-width:850px;
+}
+
+.content{
+  padding:70px 8%;
+  max-width:1200px;
+  margin:auto;
+}
+
+.block{
+  background:white;
+  border-left:6px solid #b81712;
+  padding:35px;
+  margin-bottom:28px;
+}
+
+.block h2{
+  margin-top:0;
+  font-size:34px;
+}
+
+.block p{
+  font-size:19px;
+  line-height:1.6;
+}
+
+footer{
+  background:#111;
+  color:white;
+  padding:45px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+@media(max-width:900px){
+  header{
+    height:auto;
+    padding:15px 20px;
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .logo img{height:55px;}
+
+  nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+  }
+
+  nav a{
+    margin:0;
+    font-size:13px;
+  }
+
+  .hero{
+    padding:70px 25px;
+  }
+
+  h1{
+    font-size:44px;
+  }
+
+  .hero p{
+    font-size:18px;
+  }
+
+  .content{
+    padding:40px 20px;
+  }
+
+  .block{
+    padding:25px;
+  }
+
+  footer{
+    flex-direction:column;
+    text-align:center;
+    gap:15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo para web.png" alt="Do For Love">
+  </div>
+
+  <nav>
+    <a href="index.html">INICIO</a>
+    <a href="investigacion.html">INVESTIGACIÓN</a>
+    <a href="revista.html">REVISTA</a>
+    <a href="sobre-nosotros.html">SOBRE NOSOTROS</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="kicker">SOBRE DO FOR LOVE</div>
+  <h1>Arquitectura, territorio y ciudad contados como historias.</h1>
+  <p>
+    Do For Love es una revista digital dedicada a explorar la arquitectura,
+    el urbanismo, el arte y los conflictos territoriales que transforman
+    nuestras ciudades.
+  </p>
+</section>
+
+<main class="content">
+
+  <div class="block">
+    <h2>Qué es Do For Love</h2>
+    <p>
+      Do For Love nace como una plataforma editorial para contar la arquitectura
+      más allá del edificio. Nos interesa el territorio, la infraestructura,
+      el paisaje, la memoria, el conflicto urbano y las formas en que la ciudad
+      afecta la vida cotidiana.
+    </p>
+  </div>
+
+  <div class="block">
+    <h2>Nuestra misión</h2>
+    <p>
+      Hacer que la arquitectura, el urbanismo y el arte sean comprensibles,
+      atractivos y relevantes para más personas. Do For Love busca transformar
+      investigaciones complejas en experiencias visuales, narrativas y editoriales
+      capaces de conectar con públicos fuera del círculo especializado.
+    </p>
+  </div>
+
+  <div class="block">
+    <h2>Qué publicamos</h2>
+    <p>
+      Publicamos investigaciones territoriales, revistas digitales, ensayos visuales,
+      mapas, archivos gráficos, datos duros y piezas editoriales sobre ciudad,
+      paisaje, cultura, arquitectura, infraestructura y medio ambiente.
+    </p>
+  </div>
+
+  <div class="block">
+    <h2>Primer dossier</h2>
+    <p>
+      El primer gran proyecto de Do For Love es ATOYAC: una investigación territorial
+      sobre la transformación ambiental del Río Atoyac y su relación con el agua,
+      la industria, la ciudad y la salud pública.
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  <div><strong>DO FOR LOVE</strong><br>Puebla, México</div>
+  <div>Arquitectura · Urbanismo · Arte · Territorio</div>
+</footer>
+
+</body>
+</html>
