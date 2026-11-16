@@ -95,3 +95,199 @@ h1,h2,h3{font-family:var(--font-title);text-wrap:balance}p{overflow-wrap:break-w
 .cholula-recommendations li{display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #38214415;font:12px/1.5 Arial,sans-serif}
 .cholula-recommendations li span:first-child{opacity:.5;font-size:10px}
 @media(max-width:380px){.cholula-details ul{grid-template-columns:repeat(3,1fr);row-gap:18px}}
+
+/* Fixed magazine sheets, editorial placed inside the original sky. */
+.reader-site .book.single.cholula-reading{aspect-ratio:2/3;display:flex}
+.reader-site .page.cholula-editorial{aspect-ratio:2/3;overflow:hidden;height:auto}
+.reader-site .cholula-editorial>img{width:100%;height:100%;object-fit:contain}
+.reader-site .cholula-card{position:absolute;left:5%;top:23%;width:90%;height:26%;padding:1.8%;background:rgba(243,235,221,.88);display:grid;grid-template-columns:minmax(0,2.15fr) minmax(0,1fr);gap:3%;overflow:hidden;color:#302039}
+.reader-site .cholula-main{min-width:0}
+.reader-site .cholula-eyebrow{font:700 1.5cqw/1.2 Arial,sans-serif;letter-spacing:.14em}
+.reader-site .cholula-card h2{font:700 2.6cqw/1.1 Arial,sans-serif;margin:1.5% 0 3%;letter-spacing:-.02em;text-align:left}
+.reader-site .cholula-card p{font:400 1.62cqw/1.38 Georgia,serif;margin:0 0 2.5%;text-align:left}
+.reader-site .cholula-side{border-left:1px solid #38214430;padding-left:8%;min-width:0}
+.reader-site .cholula-card h3{font:700 1.3cqw/1.3 Arial,sans-serif;letter-spacing:.04em}
+.reader-site .cholula-recommendations{margin:0;padding:0;border:0}
+.reader-site .cholula-rec-heading{display:block;margin:0 0 6%}
+.reader-site .cholula-logo{width:60px;max-width:100%;height:30px;margin-bottom:5%}
+.reader-site .cholula-logo:before{width:144px;height:36px;left:-2px;top:-1px}
+.reader-site .cholula-card .cholula-pending{display:none}
+.reader-site .cholula-recommendations li{font:400 1.45cqw/1.2 Arial,sans-serif;padding:3% 0;gap:8%;border-bottom:1px solid #38214420}
+.reader-site .cholula-recommendations li span:first-child{font-size:1.3cqw}
+.reader-site .cholula-details{margin-top:9%;padding-top:7%;border-top:1px solid #38214430}
+.reader-site .cholula-details ul{display:grid;grid-template-columns:1fr;gap:3px;margin:7% 0 0}
+.reader-site .cholula-details li{flex-direction:row;text-align:left;font:400 1.35cqw/1.2 Arial,sans-serif;gap:7%}
+.reader-site .cholula-details svg{width:3.2cqw;height:3.2cqw}
+.reader-site .page.pacheco-ad{aspect-ratio:2/3;height:auto}
+.reader-site .pacheco-ad>img{width:100%;height:100%;object-fit:contain}
+.reader-site .book:not(.single):has(>.cholula-editorial){aspect-ratio:4/3;gap:0}
+.reader-site .book:not(.single):has(>.cholula-editorial)>.page{width:50%;aspect-ratio:2/3}
+
+/* Unboxed editorial on the photograph's empty sky. */
+.reader-site .cholula-card{top:19%;height:30%;left:5%;width:90%;padding:0;background:transparent;gap:3%}
+.reader-site .cholula-card p{font-size:1.55cqw;line-height:1.32;margin-bottom:2%}
+.reader-site .cholula-card h2{font-size:2.3cqw;margin:1% 0 2%}
+.reader-site .cholula-side{padding-left:7%}
+.reader-site .cholula-logo{width:11.4cqw;height:5.8cqw;margin-bottom:3%}
+.reader-site .cholula-logo:before{width:27.4cqw;height:6.85cqw;left:-.4cqw;top:-.2cqw}
+.reader-site .cholula-rec-heading{margin-bottom:4%}
+.reader-site .cholula-recommendations li{padding:2% 0;font-size:1.35cqw}
+.reader-site .cholula-details{margin-top:6%;padding-top:5%}
+.reader-site .cholula-details ul{gap:1px;margin-top:5%}
+.reader-site .cholula-details svg{width:2.7cqw;height:2.7cqw}
+
+/* Architecture belongs to the editorial; recommendations stay secondary. */
+.reader-site .cholula-card{grid-template-columns:minmax(0,2.8fr) minmax(0,1fr);gap:4%}
+.reader-site .cholula-side{border:0;padding-left:0;opacity:.68;padding-top:2%}
+.reader-site .cholula-main .cholula-details{border:0;margin-top:3%;padding-top:0}
+.reader-site .cholula-main .cholula-details h3{display:none}
+.reader-site .cholula-main .cholula-details ul{grid-template-columns:repeat(5,minmax(0,1fr));gap:5%;margin:0}
+.reader-site .cholula-main .cholula-details li{flex-direction:column;text-align:center;gap:3px;font-size:1.2cqw;line-height:1.15}
+.reader-site .cholula-main .cholula-details svg{width:3cqw;height:3cqw}
+.reader-site .cholula-rec-heading h3{font-size:1.12cqw;letter-spacing:.03em}
+.reader-site .cholula-recommendations li{font-size:1.2cqw;border:0;padding:3% 0}
+.reader-site .cholula-logo{width:9cqw;height:4.6cqw}
+.reader-site .cholula-logo:before{width:21.6cqw;height:5.4cqw}
+
+/* One trim ratio for every magazine sheet: 2:3. */
+.reader-site #book.book{width:min(1050px,100%);aspect-ratio:4/3;display:flex;gap:0;align-items:stretch}
+.reader-site #book.book.single{width:min(525px,100%);aspect-ratio:2/3}
+.reader-site #book.book>.page{width:50%;height:100%;aspect-ratio:2/3;flex:0 0 50%;overflow:hidden}
+.reader-site #book.book.single>.page{width:100%;flex-basis:100%}
+.reader-site .dialog-content.visual>.page{aspect-ratio:2/3;height:auto;overflow:hidden}
+.reader-site .page.cover>img,.reader-site .page.opening-ad>img{width:100%;height:100%;object-fit:contain}
+.reader-site .page.photo-half{background:var(--paper)}
+.reader-site .page.photo-half>img{width:200%;height:auto;max-width:none;top:50%;transform:translateY(-50%);object-fit:contain}
+.reader-site .page.photo-left>img{left:0}
+.reader-site .page.photo-right>img{left:-100%}
+@media(max-width:650px){.reader-site #book.book,.reader-site #book.book.single{width:min(475px,100%);aspect-ratio:2/3}}
+
+@media(min-width:651px){.reader-site #book.book.single{width:min(525px,50%)}}
+
+/* Full-bleed advertisement: trim only the cream frame baked into the artwork. */
+.reader-site .page.opening-ad{background:transparent;padding:0}
+.reader-site .page.opening-ad>img{position:absolute;left:-1.8%;top:-1.8%;width:103.6%;height:103.6%;max-width:none;object-fit:cover}
+.reader-site .opening-ad .ad-label{background:transparent;color:#fff1ce;text-shadow:0 1px 3px #0009}
+/* Reserved factual captions in the sky; absent until supplied. */
+.reader-site .photo-facts{position:absolute;left:8%;right:8%;top:13%;z-index:2;color:#182f40;font:400 2.4cqw/1.4 Georgia,serif;max-width:70%}
+.reader-site .photo-facts:empty{display:none}
+.reader-site .photo-facts p{margin:0 0 1.2em}
+.reader-site .photo-facts strong{display:block;font:700 5cqw/1.1 Arial,sans-serif;margin-bottom:.25em}
+.reader-site .photo-facts small{display:block;font:1.6cqw/1.4 Arial,sans-serif;margin-top:.5em}
+
+.reader-site .page.photo-half>img{top:5.552%;height:88.896%;width:200%;transform:none;object-fit:fill}
+
+/* Revised editorial index: image in the upper-right quarter. */
+.reader-site .guide-revised{height:100%;padding:6%;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:27% 24% 1fr;gap:4%;align-content:start}
+.reader-site .guide-revised .guide-heading{grid-column:1;grid-row:1}
+.reader-site .guide-revised h1{font-size:4.5cqw;line-height:1.12;margin:3% 0 5%}
+.reader-site .guide-revised p{font:2.1cqw/1.45 Georgia,serif;margin:0 0 5%}
+.reader-site .guide-revised .guide-art{grid-column:2;grid-row:1;width:100%;height:100%;object-fit:contain;object-position:top right;aspect-ratio:auto}
+.reader-site .guide-revised h2{font:700 2.5cqw/1.2 Arial,sans-serif;color:var(--purple-dark);margin:0 0 5%}
+.reader-site .guide-story{grid-column:1;grid-row:2/4}
+.reader-site .guide-research{grid-column:2;grid-row:2}
+.reader-site .guide-research>a{font:700 2cqw/1.4 Arial,sans-serif}
+.reader-site .guide-revised .guide-note{font:1.6cqw/1.4 Arial,sans-serif;margin-top:5%}
+.reader-site .guide-revised .guide-entry{font-size:2.15cqw;line-height:1.35;padding:2.2cqw 0;gap:2cqw}
+.reader-site .guide-visit{grid-column:2;grid-row:3;align-self:start;padding-top:5%}
+.reader-site .guide-visit>img{width:90%;height:auto;display:block;margin-bottom:10%}
+.reader-site .guide-visit ul{list-style:none;margin:0;padding:0;font:2.3cqw/1.4 Georgia,serif}
+.reader-site .guide-visit li{padding:5% 0;border-bottom:1px solid #38214425}
+/* Fact captions: quiet dark ink directly on the sky. */
+.reader-site .photo-facts{top:12%;left:8%;right:8%;max-width:none;font:2.15cqw/1.42 Georgia,serif;color:#173547}
+.reader-site .photo-facts p{margin:0 0 2.8cqw;max-width:90%}
+.reader-site .photo-facts strong{font:700 2.7cqw/1.15 Arial,sans-serif;max-width:94%;margin-bottom:1cqw}
+.reader-site .photo-facts small{font:1.35cqw/1.3 Arial,sans-serif;margin-top:.8cqw;opacity:.8}
+.reader-site .photo-facts a{text-decoration-thickness:1px;text-underline-offset:.2em}
+.reader-site .photo-right .photo-facts{left:9%;right:7%;max-width:84%}
+/* Page 11: two-column editorial across the sky, recommendations as a footnote. */
+.reader-site .cholula-card{display:block;left:6%;width:88%;top:20%;height:29%;padding:0;background:transparent;overflow:hidden}
+.reader-site .cholula-main{width:100%}
+.reader-site .cholula-card h2{font:700 2.6cqw/1.1 Arial,sans-serif;margin:1% 0 2%}
+.reader-site .cholula-prose{column-count:2;column-gap:4cqw;column-fill:balance}
+.reader-site .cholula-card .cholula-prose p{font:1.8cqw/1.35 Georgia,serif;margin:0 0 1.3cqw;hyphens:none;word-break:normal;overflow-wrap:normal;text-align:left}
+.reader-site .cholula-main .cholula-details{margin-top:1.2cqw}
+.reader-site .cholula-main .cholula-details ul{display:flex;justify-content:space-between;gap:1cqw}
+.reader-site .cholula-main .cholula-details li{flex-direction:row;text-align:left;font-size:1.15cqw;gap:.6cqw}
+.reader-site .cholula-main .cholula-details svg{width:2.5cqw;height:2.5cqw}
+.reader-site .cholula-side{width:100%;padding:1.5cqw 0 0;opacity:.65;border:0}
+.reader-site .cholula-recommendations{display:flex;align-items:center;gap:2cqw}
+.reader-site .cholula-rec-heading{display:flex;align-items:center;gap:1cqw;flex:none;margin:0}
+.reader-site .cholula-logo{width:7cqw;height:3.6cqw;margin:0}
+.reader-site .cholula-logo:before{width:16.8cqw;height:4.2cqw}
+.reader-site .cholula-rec-heading h3{font-size:1cqw}
+.reader-site .cholula-recommendations ol{display:flex;gap:1.2cqw;flex-wrap:wrap}
+.reader-site .cholula-recommendations li{font-size:1cqw;padding:0;gap:.5cqw}
+.reader-site .cholula-recommendations li span:first-child{font-size:.9cqw}
+
+.reader-site .cholula-card{top:19.5%;height:30%}
+
+/* Larger Camaro poster; Visit Puebla keeps its original grid position. */
+.reader-site .guide-revised{position:relative}
+.reader-site .guide-revised .guide-art{position:absolute;grid-column:auto;grid-row:auto;right:6%;top:4%;width:56%;height:auto;aspect-ratio:4/3;object-fit:contain}
+.reader-site .guide-revised .guide-heading{width:65%;align-self:start}
+.reader-site .guide-revised .guide-heading h1{font-size:3.6cqw;line-height:1.15;margin:5% 0 8%}
+.reader-site .guide-revised .guide-heading p{font-size:2cqw;line-height:1.45}
+.reader-site .guide-revised .guide-kicker{font-size:1.3cqw;line-height:1.4}
+.reader-site .guide-revised .guide-story{padding-top:5%}
+
+/* Editorial polish: fixed sheets, larger opening artwork and photographic typography. */
+.reader-site .guide-revised .guide-art{left:6%;right:auto;top:15%;width:88%;aspect-ratio:4/3}
+.reader-site .guide-revised .guide-heading{position:absolute;top:4%;left:6%;width:88%;display:grid;grid-template-columns:1fr 1fr;gap:0 5%}
+.reader-site .guide-revised .guide-kicker{grid-column:1/-1;margin-bottom:1.5cqw}
+.reader-site .guide-revised .guide-heading h1{font-size:3.8cqw;margin:0}
+.reader-site .guide-revised .guide-heading p{font-size:2cqw;margin:0;align-self:center}
+.reader-site .guide-revised .guide-story{position:absolute;top:60%;left:6%;width:40%;padding:0}
+.reader-site .page.photo-half>img{top:0;height:100%;width:225.01%;object-fit:fill;transform:none}
+.reader-site .page.photo-left>img{left:-12.505%}
+.reader-site .page.photo-right>img{left:-112.505%}
+.reader-site .photo-facts{inset:0;max-width:none;color:#152d3e}
+.reader-site .photo-fact{position:absolute;left:8%;top:6%;width:82%}
+.reader-site .photo-fact .fact-number{font:700 1.8cqw/1 Arial,sans-serif;letter-spacing:.16em;display:block;margin-bottom:2cqw}
+.reader-site .photo-fact h2{font:800 5.9cqw/.98 Arial,sans-serif;letter-spacing:-.035em;margin:0 0 2cqw;max-width:100%;text-wrap:balance}
+.reader-site .photo-fact .fact-metric{font:italic 7.2cqw/1.05 Georgia,serif;display:block;margin:2cqw 0}
+.reader-site .photo-fact p{font:2.15cqw/1.4 Georgia,serif;max-width:85%;margin:0}
+.reader-site .photo-fact small{font:1.15cqw/1.3 Arial,sans-serif;margin-top:1.4cqw;display:block;opacity:.72}
+.reader-site .photo-left .photo-fact:nth-child(2){top:36%;width:62%}
+.reader-site .photo-left .photo-fact:nth-child(2) h2{font-size:4.2cqw}
+.reader-site .photo-left .photo-fact:nth-child(2) .fact-metric{font-size:7cqw}
+.reader-site .photo-right .photo-facts{inset:0;max-width:none}
+.reader-site .photo-right .photo-fact{left:30%;top:6%;width:62%}
+.reader-site .photo-right .photo-fact h2{font-size:4.7cqw}
+.reader-site .photo-right .photo-fact p{max-width:100%}
+.reader-site .pacheco-ad .ad-label,.reader-site .opening-ad .ad-label{position:absolute;left:6%;bottom:2%;background:transparent;color:#fff1ce;text-shadow:0 1px 3px #0009;font:700 1.5cqw/1.4 Arial,sans-serif;letter-spacing:.14em;padding:0}
+.reader-site .cholula-card{top:5%;left:6%;width:88%;height:44%;overflow:visible}
+.reader-site .cholula-main>header{margin-left:59%;width:41%;min-height:25.5cqw;display:flex;flex-direction:column;justify-content:center}
+.reader-site .cholula-eyebrow{font-size:1.6cqw;letter-spacing:.18em}
+.reader-site .cholula-card h2{font:700 4.7cqw/1.03 Arial,sans-serif;letter-spacing:-.035em;margin:1.5cqw 0 0;text-wrap:balance}
+.reader-site .cholula-card .cholula-prose p{font:2.05cqw/1.42 Georgia,serif;margin:0 0 1.5cqw}
+.reader-site .cholula-prose{column-gap:4cqw}
+.reader-site .cholula-main .cholula-details{margin-top:2cqw}
+.reader-site .cholula-main .cholula-details li{font-size:1.3cqw;line-height:1.25}
+.reader-site .cholula-main .cholula-details svg{width:3cqw;height:3cqw}
+.reader-site .cholula-side{padding-top:2cqw}
+
+.reader-site .page.photo-half{background-image:url('atoyac-cholula-doble-pagina-web-v2.jpg');background-size:225.01% 100%;background-repeat:no-repeat}
+.reader-site .page.photo-left{background-position:10% center}
+.reader-site .page.photo-right{background-position:90% center}
+.reader-site .page.photo-half>img{visibility:hidden}
+
+.reader-site .guide-revised .guide-heading,.reader-site .guide-revised .guide-story{grid-column:auto;grid-row:auto}
+
+.reader-site .cholula-main>header{margin-left:68%;width:32%;min-height:24cqw}
+.reader-site .cholula-card h2{font-size:4cqw}
+.reader-site .cholula-card .cholula-prose p{font-size:1.9cqw;line-height:1.4}
+
+/* Page 12: six intact panels with editable dialogue in dedicated gutters. */
+.reader-site .collar-six .six-layout{position:absolute;top:4%;left:6%;width:88%;display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw}
+.reader-site .collar-six figure{margin:0;min-width:0}
+.reader-site .collar-six img{display:block;width:100%;height:auto;object-fit:contain}
+.reader-site .collar-six .wide{grid-column:1/-1}
+.reader-site .collar-six .discovery-row{grid-column:1/-1;display:grid;grid-template-columns:3fr 4fr;gap:1.2cqw;align-items:start}
+.reader-site .collar-six figcaption{font:2cqw/1.3 Georgia,serif;color:var(--purple-dark);padding:.7cqw .3cqw;min-height:3.8cqw}
+.reader-site .collar-six figcaption p{margin:0 0 .6cqw}
+.reader-site .collar-six figcaption b{font:700 1.5cqw/1.3 Arial,sans-serif;letter-spacing:.03em;margin-right:.7cqw}
+.reader-site .collar-six .thought{font-style:italic}
+.reader-site .collar-six .folio{top:auto;bottom:2%;height:2.5%}
+
+.reader-site .collar-six .six-layout{left:8%;width:84%;top:3%}
